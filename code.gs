@@ -28,10 +28,10 @@ function getBody(id) {
   return DocumentApp.openById(id)
     .getBody()
     .getParagraphs()
-    .map(paragraph => {
+    .map(function(paragraph) {
       return paragraph.getText();
     })
-    .filter(paragraph => {
+    .filter(function(paragraph) {
       return paragraph !== "";
     });
 }
