@@ -10,13 +10,11 @@
  * @return {HtmlOutput} The HTML page to be served.
  */
 function doGet() {
-  var DOC_KEY = "REPLACE THIS";
-  var html = HtmlService.createTemplateFromFile("page").setTitle(
-    "Simple Tasks"
-  );
+  var DOC_KEY = "1bVwdpcswsQ8Nsz9-BJQXm0f28aBszowTNUZKHEsVWHM";
+  var html = HtmlService.createTemplateFromFile("page");
   html.text = getBody(DOC_KEY);
 
-  return html.evaluate();
+  return html.evaluate().setTitle("Simple Tasks");
 }
 
 /**
